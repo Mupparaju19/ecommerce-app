@@ -1,0 +1,6 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ecommerce-config
+data:
+  JWT_SECRET: "f5P1QhL0tjEouchdkUJqeo8YeQgJxF"
