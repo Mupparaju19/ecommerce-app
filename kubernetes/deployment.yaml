@@ -38,3 +38,24 @@ spec:
           image: murali54321/cart-service:latest
           ports:
             - containerPort: 5001
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: murali54321/frontend:latest  # ✅ Make sure this image exists
+        ports:
+        - containerPort: 80
